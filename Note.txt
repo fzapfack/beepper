@@ -1,1 +1,7 @@
+Pour tester en local
+- git pull heroku master
 - source activate beepper_env
+- pip install -r requirements.txt
+- python manage.gy makemigrations
+- python manage.py migrate
+- (pour un script python) python manage.py shell

@@ -137,3 +137,10 @@ STATICFILES_DIRS = (
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+
+# Twitter credentials
+TWITTER_CREDENTIALS = {}
+TWITTER_CREDENTIALS['ckey'] = "lrP9f7qOUMTgyokBIRhYClP7o"
+TWITTER_CREDENTIALS['csecret'] = "TAhq4opPrvags8A3mkT6u0u0VX2au6kb1Gx07erTgPZTOkkTzE"
+TWITTER_CREDENTIALS['atoken'] = "124275812-ST7sSfupaPLCNrbg5045c5roEjSTUKl7WbmyCafw"
+TWITTER_CREDENTIALS['asecret'] = "bRfqKHOY88VXz1V2auFL5hQLm5PCI7bGINSaMAmNhHjaa"
