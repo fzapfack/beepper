@@ -10,7 +10,7 @@ Pour tester en local
 >> (N oubliez pas de creer un superuser)
 python manage.py createsuperuser
 (en local mettez ce que vous voulez, le mien fab, fab-beepper)
-(on se meetra d accord pour le superuser de prod)
+(prod, usernamae=beep pwd=chocolat)
 
 >> Ajouter des url doctoctoc en db (ca peut prendre au max n_url*3 secondes car j'ai mis des sleeps)
 - python manage.py shell

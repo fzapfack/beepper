@@ -74,7 +74,7 @@ class TwitterScrapper():
         return True
 
     def load_xls(self,path):
-        max_num_questions = 1000 #Pour ne pas avoir trop de reponses
+        max_num_questions = 1000 #Pour ne pas avoir trop de reponses a enlever si upgrade postgre heroku
         wb = xlrd.open_workbook(path)
         sh = wb.sheet_by_name(u'url')
         urls = sh.col_values(0)
