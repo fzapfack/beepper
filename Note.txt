@@ -5,3 +5,16 @@ Pour tester en local
 - python manage.gy makemigrations
 - python manage.py migrate
 - (pour un script python) python manage.py shell
+
+
+>> (N oubliez pas de creer un superuser)
+python manage.py createsuperuser
+(en local mettez ce que vous voulez, le mien fab, fab-beepper)
+(on se meetra d accord pour le superuser de prod)
+
+>> Ajouter des url doctoctoc en db (ca peut prendre au max n_url*3 secondes car j'ai mis des sleeps)
+- python manage.py shell
+    - from loader.utils.doctoctoc import scrap_doctoctoc
+    - scrap_doctoctoc()
+
+!!!! remove max_num_questions dans doctoctoc.py/load_xls

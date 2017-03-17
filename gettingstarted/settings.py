@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hello',
-    'import_twitter'
+    'loader'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -140,7 +140,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Twitter credentials
 TWITTER_CREDENTIALS = {}
-TWITTER_CREDENTIALS['ckey'] = "lrP9f7qOUMTgyokBIRhYClP7o"
-TWITTER_CREDENTIALS['csecret'] = "TAhq4opPrvags8A3mkT6u0u0VX2au6kb1Gx07erTgPZTOkkTzE"
-TWITTER_CREDENTIALS['atoken'] = "124275812-ST7sSfupaPLCNrbg5045c5roEjSTUKl7WbmyCafw"
-TWITTER_CREDENTIALS['asecret'] = "bRfqKHOY88VXz1V2auFL5hQLm5PCI7bGINSaMAmNhHjaa"
+TWITTER_CREDENTIALS['ckey'] = "dzoVxPxdijcT87ZeJ8wSpDKIa"
+TWITTER_CREDENTIALS['csecret'] = "CNIvnICkkA9ZC6aYdvYA8jaL8ootz7DvTZDbBT6lNChwc2b8UA"
+TWITTER_CREDENTIALS['atoken'] = "705893043057065984-nY3izffGpVoCAW8CebkEdfVjCKUeXPg"
+TWITTER_CREDENTIALS['asecret'] = "hRMGbRPRbexjsIKsSU56uidQeDkprqf0OwwQtUIMg7eCL"
