@@ -4,6 +4,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 import hello.views
+from hello.views import open_query
 
 # Examples:
 # url(r'^$', 'gettingstarted.views.home', name='home'),
@@ -13,4 +14,5 @@ urlpatterns = [
     url(r'^$', hello.views.index, name='index'),
     url(r'^db', hello.views.db, name='db'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^query/', open_query, name='query'),
 ]

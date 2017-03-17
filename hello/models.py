@@ -1,5 +1,5 @@
 from django.db import models
-# from hello.utils.clean import clean_tweet
+from hello.utils.clean import clean_tweet
 
 # Create your models here.
 # to remove
@@ -8,12 +8,12 @@ class Greeting(models.Model):
 
 
 class QuestionManager(models.Manager):
-    # def clean_all(self):
-    #     questions = Question.objects.all()
-    #     for q in questions:
-    #         q.txt_clean, q.is_clean = clean_tweet(q.txt, remove_hashtags=True)
-    #         q.save()
-    #     return True
+    def clean_all(self):
+        questions = Question.objects.all()
+        for q in questions:
+            q.txt_clean, q.is_clean = clean_tweet(q.txt, remove_hashtags=True)
+            q.save()
+        return True
     pass
 
 
@@ -34,12 +34,12 @@ class Question(models.Model):
         return self.txt
 
 class AnswerManager(models.Manager):
-    # def clean_all(self):
-    #     answers = Answer.objects.all()
-    #     for a in answers:
-    #         a.txt_clean, a.is_clean = clean_tweet(a.txt, remove_hashtags=True)
-    #         a.save()
-    #     return True
+    def clean_all(self):
+        answers = Answer.objects.all()
+        for a in answers:
+            a.txt_clean, a.is_clean = clean_tweet(a.txt, remove_hashtags=True)
+            a.save()
+        return True
     pass
 
 

@@ -14,7 +14,7 @@ python manage.py createsuperuser
 
 >> Ajouter des url doctoctoc en db (ca peut prendre au max n_url*3 secondes car j'ai mis des sleeps)
 - python manage.py shell
-    - from loader.utils.doctoctoc import scrap_doctoctoc
-    - scrap_doctoctoc()
+    - from loader.utils import doctoctoc
+    - doctoctoc.scrap_doctoctoc()
 
 !!!! remove max_num_questions dans doctoctoc.py/load_xls

@@ -8,6 +8,7 @@ import time
 import random
 from django.conf import settings
 from hello.models import Question, Answer
+from hello.utils.clean import clean_tweet
 
 # https://twitter.com/DocteurePATATE/status/842360779454189568
 
@@ -65,10 +66,12 @@ class TwitterScrapper():
             print()
         else:
             q = Question(txt=res[0], src='twiiter_scrap')
+            q.txt_clean, q.is_clean = clean_tweet(q.txt, remove_hashtags=True)
             q.save()
             if len(res)>1:
                 for r in res[1:]:
                     a = Answer(txt=r, src='twiiter_scrap', question_id=q.pk)
+                    a.txt_clean, a.is_clean = clean_tweet(a.txt, remove_hashtags=True)
                     a.save()
             self.num_url_succeed += 1
         return True
