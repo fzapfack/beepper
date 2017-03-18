@@ -6,10 +6,12 @@
 <div class="jumbotron text-center" style="height: 100%">
     <div class="container">
         <h1>
-            Résultats à la requête:
+            Résultats pour la requête:
         </h1>
         <p>
+            <i class="fa fa-quote-left" aria-hidden="true"></i>
             <strong>{{ query }}</strong>.
+            <i class="fa fa-quote-right" aria-hidden="true"></i>
         </p>
     </div>
 </div>
@@ -19,13 +21,13 @@
         {% for q in questions %}
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="fa fa-bell fa-fw"></i> {{q.txt}} </h3>
+                    <h3 class="panel-title"><i class="fa fa-question"></i> {{q.txt}} </h3>
                 </div>
                 <div class="panel-body">
                     <div class="list-group">
                         {% for a in q.answers %}
                             <div class="list-group-item">
-                                <i class="fa fa-fw fa-user"></i> {{ a.txt }}
+                                <i class="fa fa-reply"></i> {{ a.txt }}
                             </div>
 
                         {% endfor %}
