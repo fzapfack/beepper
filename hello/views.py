@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 
 from .models import Greeting
+from hello.utils.match import Matcher
 
 # Create your views here.
 def index(request):
@@ -14,7 +15,11 @@ def open_query(request):
     print(request.POST)
     if request.method == 'POST':
         query = request.POST.get('query')
-        return HttpResponse(query)
+        m = Matcher()
+        questions = m.match_question(query)
+        context = {'query': query,
+                   'questions': questions}
+        return render(request, 'index2.html', context)
     else:
         return HttpResponseRedirect('/')
 
