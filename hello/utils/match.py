@@ -5,6 +5,8 @@ from unidecode import unidecode
 from sklearn.feature_extraction.text import CountVectorizer
 from hello.models import Question, Answer
 
+nltk.data.path.append('hello/data/nltk')
+
 
 class Matcher:
     def __init__(self, num_match_returned=5):
