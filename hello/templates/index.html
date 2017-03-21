@@ -2,6 +2,7 @@
 {% load staticfiles %}
 
 {% block content %}
+<body>
 
 <div class="jumbotron text-center">
     <img src="http://tmn.easy4blog.com/images/billets/0258/258189.jpg" width="120" >
@@ -19,8 +20,9 @@
     </div>
 </div>
 
-  <hr>
-  <div class="col-md-12 col-md-offset-1" style="width: 85%;">
+<hr>
+<div class="row">
+  <div class="col-md-12" style="width: 85%; margin-left: 110px">
 
     
         <h4>Dernières questions posées ...</h4>
@@ -153,22 +155,31 @@
 
     </table>
 
-  </div> 
+  </div>
+    
+</div>
+   
 
-<div class="container" style="width: 84%;">
-<h5 class="text-center"> Contactez-nous </h5>
-  <form action="/action_page.php">
+<div class="contactcontainer">
+  <div class="row">
+  <div class="col-md-12" style="width: 85%; margin-left: 110px">
+  <h5 class="text-center"> Contactez-nous </h5>
+  <form action="mailto:duranteaualice@gmail.com" method="post" enctype="text/plain">
 
     <label for="fname">Votre Nom</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="subject">Votre message</label>
+    <label for="subject">Votre Message</label>
     <textarea id="subject" name="subject" placeholder="Partagez nous votre avis.." style="height:200px"></textarea>
 
     <input type="submit" value="Envoyez">
-
-  </form>
+  </form> 
+  </div>
+  </div>
 </div>
+  
+</body>
+
 
 
 
