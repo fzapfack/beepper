@@ -57,30 +57,15 @@
   <div class="container">
     <ul class="nav navbar-nav">
       <li class="active">
-        <a href="/"><span class="glyphicon glyphicon-home"></span> Accueil</a>
+        <a href="#"><span class="glyphicon glyphicon-home"></span> Accueil</a>
       </li>
       <li>
-        <a href="https://devcenter.heroku.com/articles/how-heroku-works"><span class="glyphicon glyphicon-user"></span> Qui sommes-nous ?</a>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Getting Started Guides <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-ruby">Getting Started with Ruby on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-php">Getting Started with PHP on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started with Python on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java">Getting Started with Java on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-clojure">Getting Started with Clojure on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-scala">Getting Started with Scala on Heroku</a></li>
-            <li class="divider"></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-heroku-and-connect-without-local-dev">Getting Started on Heroku with Heroku Connect</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-jruby">Getting Started with Ruby on Heroku (Microsoft Windows)</a></li>
-          </ul>
+        <a href="http://acphilbert.wixsite.com/medilinx"></span> Comment ça marche ?</a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li class="navbar-right">
-        <a href="https://devcenter.heroku.com"><span class="glyphicon glyphicon-book"></span> Heroku Dev Center</a>
+        <a href="/"><span class="glyphicon glyphicon-envelope" id="contact"></span> contact@medilinx.io </a>
       </li>
     </ul>
   </div>
@@ -94,10 +79,10 @@
         font-family: 'Open Sans', sans-serif;
         font-weight: 500;
       }
-    h4 {
+    h4,h5 {
         font-size: 25px;   
-      }  
-
+      }
+      
     th {
         font-size: 17px;   
       }
@@ -107,11 +92,41 @@
       } 
 
     td  {
-        font-size: 13px;   
-      }   
+        font-size: 13px; 
+    }
 
+    /* Style inputs with type="text", select elements and textareas */
+    input[type=text], select, textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */  
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 4px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
 
+    /* Style the submit button with a specific background color etc */
+    input[type=submit] {
+        background-color: #87CEEB;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 
+    /* When moving the mouse over the submit button, add a darker green color */
+    input[type=submit]:hover {
+    }
 
+    /* Add a background color and some padding around the form */
+    #contact-container {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: white;
+        padding: 20px;
+    }
 
 </html>
