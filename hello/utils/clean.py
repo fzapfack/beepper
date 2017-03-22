@@ -2,9 +2,9 @@ import re
 
 
 def clean_tweet(txt, remove_hashtags=False):
-    # Remove @ and pics
-    clean1 = re.sub('@\w+', '', txt)
-    clean = re.sub('pic.twitter.com[^\s]*', '', clean1)
+    # Remove @
+    clean1=txt.split('pic.twitter')[0]
+    clean = re.sub('@\w+', '', clean1)
     if remove_hashtags:
         clean = re.sub('#\w+', '', clean)
         good = True
