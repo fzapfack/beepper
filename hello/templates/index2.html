@@ -6,7 +6,7 @@
 <div class="jumbotron text-center" style="height: 100%">
     <div class="container">
         <h1>
-            Résultats pour la requête:
+            Résultats pour la recherche:
         </h1>
         <p>
             <i class="fa fa-quote-left" aria-hidden="true"></i>
@@ -24,6 +24,7 @@
                     <h3 class="panel-title"><i class="glyphicon glyphicon-user"></i> {{q.txt}} </h3>
                 </div>
                 <div class="panel-body">
+                    <button type="button" class="btn btn-default">Répondre</button>
                     <div class="list-group">
                         {% for a in q.answers %}
                             <div class="list-group-item">

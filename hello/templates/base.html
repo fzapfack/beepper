@@ -11,22 +11,23 @@
 
     <style type="text/css">
         .jumbotron {
-            background: #87CEEB;
-            color: white;
-            height: 420px;
+            background: white;
+            color: #8fbed8;
+            height: 800px;
             padding-bottom: 10px;
             font-family: 'Open Sans', sans-serif;
             font-weight: 500;
         }
         .jumbotron .btn-primary {
             background: blue;
-            border-color: #845ac7
+            border-color: #845ac7;
+
         }
         .jumbotron .btn-primary:hover {
             background: #7646c1
         }
         .jumbotron p {
-            color: white;
+            color: #8fbed8;
             max-width: 75%;
             margin: 0.5em auto 2em;
             font-family: 'Open Sans', sans-serif;
@@ -34,7 +35,7 @@
             font-weight: 500;
         }
         .navbar+.jumbotron {
-            margin-top: -20px
+            margin-top: -65px
         }
         .jumbotron .lang-logo {
             display: block;
@@ -53,22 +54,23 @@
 
 </head>
 <body>
-<nav class="navbar navbar-default navbar-static-top navbar-inverse">
-  <div class="container">
+<nav class="navbar navbar-default navbar-static-top" style="background-color: #e3f2fd; height:80%">
     <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="#"><span class="glyphicon glyphicon-home"></span> Accueil</a>
-      </li>
       <li>
-        <a href="http://acphilbert.wixsite.com/medilinx"></span> Comment ça marche ?</a>
-      </li>
+        <a href="https://beepper.herokuapp.com/"><span class="glyphicon glyphicon-home">        </span> Accueil </a>
+      </li>
+      <li>
+        <a href="http://acphilbert.wixsite.com/medilinx"></span> Comment ça marche ?</a>
+      </li>
+      <li>
+        <a href="#"></span> Questions ?</a>
+      </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li class="navbar-right">
         <a href="#Contactez-nous"><span class="glyphicon glyphicon-envelope" id="contact"></span> contact@medilinx.io </a>
       </li>
     </ul>
-  </div>
 </nav>
 
 {% block content %}{% endblock %}
@@ -115,7 +117,8 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        margin-left: 500px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     /* When moving the mouse over the submit button, add a darker green color */
