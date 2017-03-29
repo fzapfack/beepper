@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="jumbotron text-center" style="height: 100%">
+    <div class="container">
+        <h1>
+            Entrez votre réponse
+        </h1>
+    </div>
+</div>
+
+<div class="row">
+    <form class="" action="" method="post"> {% csrf_token %}
+        <div class="col-xs-4 text-center col-xs-offset-4">
+            {{ form|crispy }}
+            <input type="submit" value="Valider" class="btn btn-primary"/>
+{#                <input type="submit" value="Terminer" class="btn btn-success"/>#}
+        </div>
+    </form>
+</div>
+
+
+
+ 
+{% endblock %}

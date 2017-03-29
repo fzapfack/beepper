@@ -46,23 +46,28 @@ def new_question(request):
     }
     return render(request, 'new_question.html', context)
 
-# def new_answer(request):
-#     q = Answer(src='website')
-#     if request.method == 'POST':
-#         form = AnswerForm(request.POST, instance=q)
-#         if form.is_valid():
-#             instance = form.save(commit=False)
-#             instance.txt_clean = instance.txt
-#             instance.save()
-#             return HttpResponseRedirect('/new/answer/')
-#         else:
-#             pass
-#     else:
-#         form = QuestionForm(instance=q)
-#     context = {
-#         'form': form,
-#     }
-#     return render(request, 'new_question.html', context)
+
+def new_answer(request, question_id=None):
+    if 'question_id' not in request.GET:
+        return HttpResponse("Une erreur est survenue. Merci de réessayer")
+    else:
+        question_id = request.GET['question_id']
+    a = Answer(src='website', question_id=question_id)
+    if request.method == 'POST':
+        form = AnswerForm(request.POST, instance=a)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.txt_clean = instance.txt
+            instance.save()
+            return HttpResponseRedirect('/')
+        else:
+            pass
+    else:
+        form = AnswerForm(instance=a)
+    context = {
+        'form': form,
+    }
+    return render(request, 'new_answer.html', context)
 
 
 
