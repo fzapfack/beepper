@@ -8,9 +8,9 @@
     <img src="http://www.focusonanimation.com/wp-content/uploads/2011/08/Bipbip-Coyote-wallpaper.jpg" width="550">
     <h1>Beeper</h1>
     <p>La santé n'attend pas</p>
-    <div class="col-md-12">
+    <div class="col-md-12 text-center">
         <form class="form-inline" action="/query/" method="post">{% csrf_token %}
-            <span class="col-md-8 col-md-offset-1">
+            <span class="col-md-7 col-md-offset-1">
                 <input type="question" class="form-control form-control-lg" name="query" id="query" placeholder="Votre question" style="width: 120%; height: 55px;">
             </span>
             <span class="col-md-2 col-md-offset-1">
@@ -20,23 +20,25 @@
     </div>
 </div>
 
-<div class="contactcontainer">
-  <div class="row">
-  <div class="col-md-12" style="width: 85%; margin-left: 110px">
-  <h5 class="text-center"> Contactez-nous </h5>
-  <form action="mailto:duranteaualice@gmail.com" method="post" enctype="text/plain">
 
-    <label for="fname">Votre Nom</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="subject">Votre Message</label>
-    <textarea id="subject" name="subject" placeholder="Partagez nous votre avis.." style="height:200px"></textarea>
-
-    <input type="submit" value="Envoyez">
-  </form> 
-  </div>
-  </div>
-</div>
+{# decommentez#}
+{#<div class="contactcontainer">#}
+{#  <div class="row">#}
+{#  <div class="col-md-12" style="width: 85%; margin-left: 110px">#}
+{#  <h5 class="text-center"> Contactez-nous </h5>#}
+{#  <form action="mailto:duranteaualice@gmail.com" method="post" enctype="text/plain">#}
+{##}
+{#    <label for="fname">Votre Nom</label>#}
+{#    <input type="text" id="fname" name="firstname" placeholder="Your name..">#}
+{##}
+{#    <label for="subject">Votre Message</label>#}
+{#    <textarea id="subject" name="subject" placeholder="Partagez nous votre avis.." style="height:200px"></textarea>#}
+{##}
+{#    <input type="submit" value="Envoyez">#}
+{#  </form> #}
+{#  </div>#}
+{#  </div>#}
+{#</div>#}
   
 </body>
 
