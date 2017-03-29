@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'hello',
     'loader',
 )
@@ -144,3 +145,6 @@ TWITTER_CREDENTIALS['ckey'] = "dzoVxPxdijcT87ZeJ8wSpDKIa"
 TWITTER_CREDENTIALS['csecret'] = "CNIvnICkkA9ZC6aYdvYA8jaL8ootz7DvTZDbBT6lNChwc2b8UA"
 TWITTER_CREDENTIALS['atoken'] = "705893043057065984-nY3izffGpVoCAW8CebkEdfVjCKUeXPg"
 TWITTER_CREDENTIALS['asecret'] = "hRMGbRPRbexjsIKsSU56uidQeDkprqf0OwwQtUIMg7eCL"
+
+# crispy-forms
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
