@@ -11,7 +11,9 @@ from .forms import QuestionForm, AnswerForm
 # Create your views here.
 def index(request):
     # return HttpResponse('Hello from Python!')
+    questions = Question.objects.all().order_by("-id")[:5]
     context = {}
+    context['questions']=questions
     return render(request, 'index.html', context)
 
 
