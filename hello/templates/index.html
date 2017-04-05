@@ -27,7 +27,7 @@
             <h2> Les questions récentes </h2>
             {% for q in questions %}
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="background: #fafafa">
+                    <div class="panel-heading" style="background:rgba(250, 250, 250, 0.7)">
                         <h3 class="panel-title" style="font-size: 12px"><i class="glyphicon glyphicon-user" style="margin-right: 1em"></i> {{q.txt}} </h3>
                         <a href="/new/answer/?question_id={{q.id}}" class="btn btn-default" style="margin-top: 10px; font-size: 12px">Répondre</a>
                     </div>
