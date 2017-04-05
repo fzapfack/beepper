@@ -22,7 +22,19 @@
 
 
 <div>
-    {{ questions}}
+    <div class="row">
+        <div class=" col-md-10 col-md-offset-1">
+            <h2> Les questions récentes </h2>
+            {% for q in questions %}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="glyphicon glyphicon-user"></i> {{q.txt}} </h3>
+                        <a href="/new/answer/?question_id={{q.id}}" class="btn btn-default" style="margin-bottom: 10px;">Répondre</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 
 {# decommentez#}
