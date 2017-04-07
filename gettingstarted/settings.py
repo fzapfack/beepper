@@ -37,10 +37,18 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.algoliasearch',
     'crispy_forms',
     'hello',
     'loader',
+    'algolia',
 )
+
+ALGOLIA = {
+    'APPLICATION_ID': "GQ4GQ3W69B",
+    'API_KEY': "d8f09b7590b2bccbb5e8294a6c16a4a3"
+}
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

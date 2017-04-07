@@ -1,10 +1,17 @@
+algoliasearch==1.12.0
+algoliasearch-django==1.2.5
 appdirs==1.4.3
+appnope==0.1.0
+asn1crypto==0.22.0
 beautifulsoup4==4.5.3
+cffi==1.10.0
+cryptography==1.8.1
 decorator==4.0.11
 dj-database-url==0.4.1
 Django==1.9.7
 django-crispy-forms==1.6.1
 gunicorn==19.6.0
+idna==2.5
 ipython==5.3.0
 ipython-genutils==0.2.0
 nltk==3.2.2
@@ -16,7 +23,9 @@ pickleshare==0.7.4
 prompt-toolkit==1.0.13
 psycopg2==2.6.1
 ptyprocess==0.5.1
+pycparser==2.17
 Pygments==2.2.0
+pyOpenSSL==16.2.0
 pyparsing==2.2.0
 requests==2.13.0
 requests-oauthlib==0.8.0
