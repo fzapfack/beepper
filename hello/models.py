@@ -29,6 +29,7 @@ class Question(models.Model):
     src = models.CharField(max_length=30, null=True, blank=True) #doctoctoc or website or twiiter_scrap
     tweet_infos = models.TextField(null=True, blank=True)
     is_clean = models.BooleanField(default=False)
+    group = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.txt
