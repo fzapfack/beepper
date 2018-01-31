@@ -1,7 +1,9 @@
 # Beeper
 
 A python app that analyses medical tweets in order to find answers to different medical question.
-Quick comparaison of `Algolia` and `NLP words vectors` approaches
+Quick comparaison of `Algolia` and `NLP words vectors` approaches.
+
+Check a result at: https://beepper.herokuapp.com/
 
 ## Running Locally
 
