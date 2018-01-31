@@ -10,7 +10,11 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 import os
+import json
 import dj_database_url
+
+with open('secrets.json', 'r') as f:
+    conf = json.load(f)
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,7 +26,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: change this before deploying to production!
-SECRET_KEY = 'i+acxn5(akgsn!sr4^qgf(^m&*@+g1@u^t@=8s@axc41ml*f=s'
+SECRET_KEY = conf['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -44,10 +48,7 @@ INSTALLED_APPS = (
     # 'algolia',
 )
 
-ALGOLIA = {
-    'APPLICATION_ID': "GQ4GQ3W69B",
-    'API_KEY': "d8f09b7590b2bccbb5e8294a6c16a4a3"
-}
+ALGOLIA = conf['ALGOLIA']
 
 
 MIDDLEWARE_CLASSES = (
@@ -148,11 +149,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 # Twitter credentials
-TWITTER_CREDENTIALS = {}
-TWITTER_CREDENTIALS['ckey'] = "dzoVxPxdijcT87ZeJ8wSpDKIa"
-TWITTER_CREDENTIALS['csecret'] = "CNIvnICkkA9ZC6aYdvYA8jaL8ootz7DvTZDbBT6lNChwc2b8UA"
-TWITTER_CREDENTIALS['atoken'] = "705893043057065984-nY3izffGpVoCAW8CebkEdfVjCKUeXPg"
-TWITTER_CREDENTIALS['asecret'] = "hRMGbRPRbexjsIKsSU56uidQeDkprqf0OwwQtUIMg7eCL"
+TWITTER_CREDENTIALS = conf['TWITTER']
 
 # crispy-forms
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
